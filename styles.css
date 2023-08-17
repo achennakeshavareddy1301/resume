@@ -326,8 +326,8 @@ footer a:hover {
 }
 
 #profile-card1 img {
-    width: auto;
-    height: auto;
+    width: 50%;
+    height: flex;
     margin-right: 20px;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;

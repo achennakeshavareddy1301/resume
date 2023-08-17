@@ -1,351 +1,256 @@
-/* General Styles */
-body{
+/* Reset default styles */
+body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
-    font-family: 'Markazi Text', sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-    height: 100%;
 }
 
-/* Style for the navbar container */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: linear-gradient(to bottom, #333333, #8e8787);
-  color: #fff;
-  height: 80px;
-  padding: 0 20px;
-}
-
-/* Style for the logo image */
-nav img {
-  height: 50px;
-  transition: transform 0.3s ease-in-out;
-}
-
-/* Hover effect for the logo image */
-nav img:hover {
-  transform: rotate(360deg);
-}
-
-/* Style for the navbar link text */
-nav a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
-  align-items:right;
-  display: inline;
-  text-align: right;
-}
-
-/* Hover effect for the navbar links */
-nav a:hover {
-  color: #f1c40f;
-  text-decoration:underline;
-}
-
-/* Profile Card Styles */
-#profile-card {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-#profile-card.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-#profile-card {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-#profile-card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; /* Set a minimum height to ensure the profile cards are always visible */
-}
-#profile-card {
-    margin: 20px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#profile-card img {
-    max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#profile-card h2 {
-    margin-top: 10px;
-}
-
-#profile-card p {
-    margin-top: 10px;
-    text-align: center;
-}
-
-#profile-card li {
-    margin-top: 5px;
-}
-
-#profile-card p:first-of-type {
-    font-weight: bold;
-}
-
-#profile-card p:last-of-type {
-    margin-bottom: 0;
-}
-
-/* Style for the contacts container */
-#contacts {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-}
-
-#contacts img {
-    margin-right: 20px;
-}
-/* Contact Image Styles */
-#contact-image {
-    position: relative;
-    overflow: hidden;
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
-}
-
-#contacts img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease-in-out;
-}
-
-#contacts :hover img {
-    transform: scale(1.1);
-}
-
-#contacts img::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-
-#contacts img:hover::before {
-    opacity: 1;
-}
-
-#contacts img::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60%;
-    height: 60%;
-    opacity: 0;
-    border-radius: 50%;
-    transition: opacity 0.3s ease-in-out;
-}
-
-#contacts img:hover::after {
-    opacity: 1;
-}
-
-
-/* Media Queries */
-@media screen and (max-width: 768px) {
-    .profile-card-container {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .profile-card {
-        width: calc(100% - 40px);
-        margin-left: auto !important;
-        margin-right: auto !important;
-        margin-bottom: 20px !important;
-    }
-    
-    #contacts {
-        flex-direction: column !important;
-        margin-top: 20px !important;
-        margin-bottom: 20px !important;
-    }
-    
-    #contacts img {
-        margin-right: 0 !important;
-        margin-bottom: 10px !important;
-    }
-}
-
-/* Animations */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Custom Styles */
+/* Set font */
 body {
-    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+    font-family: 'Markazi Text', serif;
+}
+
+/* Set background and gradient */
+body {
+    background-color: #f2f2f2;
+    background-image: linear-gradient(135deg, #E2CC6B 0%, #75B9BE 100%);
+    background-size: cover;
+    background-attachment: fixed;
+    animation: backgroundChange 10s infinite alternate;
+}
+
+/* Style the navigation bar */
+nav {
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    animation: fadeIn 1s ease-in;
+}
+
+nav img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    animation: bounceIn 1s ease-in;
 }
 
 nav p {
-    font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1920 - 320)));
+    font-size: 1.2rem;
+    animation: slideInLeft 1s ease-in;
 }
 
-h2 {
-    font-size: calc(24px + (36 - 24) * ((100vw - 320px) / (1920 - 320)));
+/* Style profile cards */
+#profile-card1, #profile-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    animation: slideInUp 1s ease-in;
 }
 
-p {
-    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+#profile-card1 img, #profile-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 20px;
+    animation: bounceIn 1s ease-in;
 }
 
-li {
-    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+.profile-details {
+    flex: 1;
 }
 
-@media screen and (max-width:768px){
-   .profile-details{
-       text-align:center
-   }
+#profile-card1 h2, #profile-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    animation: slideInRight 1s ease-in;
 }
-/* Footer Styles */
+
+/* Style education list */
+.profile-details p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    animation: slideInLeft 1s ease-in;
+}
+
+.profile-details li {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    animation: slideInLeft 1s ease-in;
+}
+
+/* Style skill images */
+.profile-details img {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    animation: fadeIn 1s ease-in;
+}
+
+/* Style contact icons */
+#contacts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    animation: slideInUp 1s ease-in;
+}
+
+#contacts a {
+    margin: 0 10px;
+}
+
+/* Style footer */
 footer {
     background-color: #333;
-    color: #fff;
+    color: white;
     text-align: center;
-    padding: 20px;
-    margin-top: 50px;
-}
-/* Footer link styles */
-footer a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-}
-/* Footer link hover effect */
-footer a:hover {
-    color: #f1c40f;
-}
-/* More Profile Card Effects */
-#profile-card {
-    position: relative;
-    overflow: hidden;
+    padding: 10px;
+    animation: slideInUp 1s ease-in;
 }
 
-#profile-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+/* Set footer font size */
+footer p {
+    font-size: 0.8rem;
 }
 
-#profile-card:hover::before {
-    opacity: 1;
+/* ... (previous styles) ... */
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav img {
+        margin: 10px 0;
+    }
+
+    #profile-card1, #profile-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #profile-card1 img, #profile-card img {
+        margin: 20px auto;
+    }
+
+    #profile-card1 h2, #profile-card h2 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+
+    .profile-details p, .profile-details li {
+        font-size: 1rem;
+    }
+
+    .profile-details img {
+        width: 30px;
+        height: 30px;
+    }
+
+    #contacts {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contacts a {
+        margin: 5px 0;
+    }
+
+    footer p {
+        font-size: 0.7rem;
+    }
 }
 
-#profile-card img {
-    max-width: 100%;
-    height: auto;
+/* ... (rest of the styles) ... */
+
+/* Keyframe animations */
+@keyframes backgroundChange {
+    0% {
+        background-image: linear-gradient(135deg, #E2CC6B 0%, #75B9BE 100%);
+    }
+    100% {
+        background-image: linear-gradient(135deg, #75B9BE 0%, #E2CC6B 100%);
+    }
+}
+/* ... (previous styles) ... */
+
+/* Animation for the profile picture */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+}
+
+#profile-card1 img, #profile-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 20px;
     transition: transform 0.3s ease-in-out;
 }
 
-#profile-card:hover img {
+#profile-card1 img:hover, #profile-card img:hover {
     transform: scale(1.1);
+    animation: blink 1s infinite;
 }
 
-#profile-card h2 {
-    font-size: 24px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+/* ... (rest of the styles) ... */
+/* ... (previous styles) ... */
+
+/* Animation for the navigation bar image */
+@keyframes rotateIn {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(60deg);
+    }
 }
 
-#profile-card p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-#profile-card a {
-    color: #fff;
-    text-decoration: none;
-    background-color: #f1c40f;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease-in-out;
-}
-
-#profile-card a:hover {
-    background-color: #e67e22;
-}
-#profile-card1 {
-    margin: 20px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    max-width: 600px; /* Set a maximum width for responsiveness */
+nav img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    animation: rotateIN 2s;
     
 }
 
-#profile-card1 img {
-    width: 50%;
-    height: flex;
-    margin-right: 20px;
-    border-radius: 10px;
+/* ... (rest of the styles) ... */
+/* ... (previous styles) ... */
+
+/* Animation for contact icons */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+#contacts a {
+    margin: 0 10px;
+    display: inline-block;
+    animation: bounce 1s infinite;
     transition: transform 0.3s ease-in-out;
 }
 
-#profile-card1:hover img {
-    transform: scale(1.1);
+#contacts a:hover {
+    transform: scale(1.2);
 }
 
-#profile-card1 h2 {
-    font-size: 24px;
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-
-#profile-card1 p {
-    font-size: 18px;
-    margin-bottom: 20px;
-    text-align:right;
-}
+/* ... (rest of the styles) ... */
 

@@ -313,4 +313,37 @@ footer a:hover {
 #profile-card a:hover {
     background-color: #e67e22;
 }
+#profile-card1 {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    max-width: 600px; /* Set a maximum width for responsiveness */
+}
+
+#profile-card1 img {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#profile-card1:hover img {
+    transform: scale(1.1);
+}
+
+#profile-card1 h2 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#profile-card1 p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
 

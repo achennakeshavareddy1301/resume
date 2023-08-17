@@ -325,7 +325,7 @@ footer a:hover {
 }
 
 #profile-card1 img {
-    width: 200px;
+    width: 50%;
     height: auto;
     margin-right: 20px;
     border-radius: 10px;
@@ -345,5 +345,6 @@ footer a:hover {
 #profile-card1 p {
     font-size: 18px;
     margin-bottom: 20px;
+    text-align:right;
 }
 

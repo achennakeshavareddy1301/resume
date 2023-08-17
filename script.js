@@ -1,23 +1,36 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const sidebarToggle = document.querySelector("#sidebar-toggle");
-    const sidebar = document.querySelector(".side-bar");
-
-    sidebarToggle.addEventListener("click", function () {
-        sidebar.classList.toggle("show");
-    });
-});
 const profileCards = document.querySelectorAll('.profile-card');
 
-function handleIntersection(entries) {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-    }
-  });
+// Function to check if an element is in view
+function isInView(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
 }
 
-const observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
+// Function to show the profile cards when they are in view
+function showCards() {
+    profileCards.forEach(profileCard => {
+        if (isInView(profileCard)) {
+            profileCard.classList.add('show');
+        }
+    });
+}
 
-profileCards.forEach(profileCard => {
-  observer.observe(profileCard);
-});
+// Event listener to show the profile cards when the page is scrolled
+window.addEventListener('scroll', showCards);
+
+// Function to animate the navbar logo on click
+function animateLogo() {
+    const logo = document.querySelector('nav img');
+    logo.classList.add('animate');
+    setTimeout(() => {
+        logo.classList.remove('animate');
+    }, 1000);
+}
+
+// Event listener to animate the navbar logo on click
+document.querySelector('nav img').addEventListener('click', animateLogo);

@@ -7,6 +7,7 @@ body, html {
     color: #333;
     height: 100%;
 }
+
 /* Style for the navbar container */
 nav {
   display: flex;
@@ -44,6 +45,7 @@ nav a:hover {
   color: #f1c40f;
   text-decoration:underline;
 }
+
 /* Profile Card Styles */
 #profile-card {
     margin-top: 140px; /* Adjusted */
@@ -63,12 +65,64 @@ nav a:hover {
     display: right;
 }
 
+#profile-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#profile-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.profile-details h1,
+.profile-details p {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#profile-card.show .profile-details h1,
+#profile-card.show .profile-details p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#profile-card.show img {
+  opacity: 1;
+  transform: scale(1);
+}
+
 #profile-card img {
-    max-width: 40%; /* Updated */
-    display: flex;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+#profile-card .images {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#profile-card .images img {
+  width: calc(33.33% - 10px);
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+#profile-card .images img:nth-child(3n) {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  #profile-card .images img {
+    width: calc(50% - 10px);
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  #profile-card .images img:nth-child(2n) {
+    margin-right: 0;
+  }
 }
 
 #profile-card img:hover {
@@ -129,11 +183,26 @@ footer {
     #profile-card {
         margin-left: 0;
         margin-top: 20px;
+        flex-direction: column-reverse;
+        align-items:center
     }
-    .side-bar {
-        top: -200px;
+    
+    .profile-details {
+        padding-left: 0;
+        text-align:center
     }
-    .side-bar.show {
-        top: 0;
+    
+    #profile-card img {
+        max-width:100%;
+        margin-bottom:20px
+    }
+    
+    #profile-card .images img {
+        width: calc(50% - 5px);
+        margin-right:5px
+    }
+    
+    #profile-card .images img:last-child {
+        margin-right:0
     }
 }

@@ -284,8 +284,6 @@ nav img {
 }
 
 .background {
-    background-color:linear-gradient(135deg, #8f8e8b 0%, #090b0b 100%);
-    display: grid;
     place-items: center;
     height: 20vh;
 }

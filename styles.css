@@ -289,28 +289,60 @@ nav img {
     place-items: center;
     height: 20vh;
 }
+
+.gallery {
+    display: flex;
+    background-color: var(--background);
+    gap: 16px;
+}
+
 .card {
     position: relative;
     left: 0px;
     width: 80px;
-    border-radius: 16px;
     height: 80px;
-    overflow: hidden;
     background-color: var(--background);
-    transition: 0.4s ease-in-out;
+    border-radius: 8px;
+    transition: 1000ms all;
+    transform-origin: center left;
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
-    flex: 0.25;
+    outline: 1px solid var(--background);
+    overflow: hidden;
 }
 
 .card img {
     height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
 }
 
 .card:hover {
-    flex: 2;
-    font-weight: bold;
     cursor: pointer;
-    border-radius: 8px;
+    transform: scale(1.15);
 }
 
+.card:hover figcaption {
+    font-size: 0.6rem;
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    display: flex;
+    align-items: end;
+    background: linear-gradient(
+        to top, 
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    color: white;
+    left: 0px;
+    bottom: 0px;
+    padding-left: 12px;
+    padding-bottom: 10px;
+}
+
+.card:hover ~ .card {
+    font-weight: bold;
+    cursor: pointer;
+    transform: translateX(22px);
+}
 

@@ -296,54 +296,5 @@ nav img {
     gap: 16px;
 }
 
-.card {
-    position: relative;
-    left: 0px;
-    width: 180px;
-    height: 180px;
-    background-color: var(--background);
-    border-radius: 8px;
-    transition: 1000ms all;
-    transform-origin: center left;
-    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
-    outline: 1px solid var(--background);
-    overflow: hidden;
-}
 
-.card img {
-    border-radius: 4px;
-    width: 100px;
-    height: 100px;
-    display: center;
-}
-
-.card:hover {
-    cursor: pointer;
-    transform: scale(1.15);
-}
-
-.card:hover figcaption {
-    font-size: 0.6rem;
-    position: absolute;
-    height: 185px;
-    width: 185px;
-    display: flex;
-    align-items: end;
-    background: linear-gradient(
-        to top, 
-        rgba(0, 0, 0, 0.9) 0%,
-        rgba(0, 0, 0, 0) 100%
-    );
-    color: white;
-    left: 0px;
-    bottom: 0px;
-    padding-left: 12px;
-    padding-bottom: 10px;
-}
-
-.card:hover ~ .card {
-    font-weight: bold;
-    cursor: pointer;
-    transform: translateX(22px);
-}
 

@@ -270,6 +270,25 @@ nav img {
         transform: translateY(-5px);
     }
 }
+:root {
+    --background: #2C2C2C;
+    --primary-color: white;
+    --secondary-color: #2C2C2C;
+}
+
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+.background {
+    background-color: var(--background);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
 
 
 

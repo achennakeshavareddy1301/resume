@@ -290,11 +290,4 @@ nav img {
     height: 20vh;
 }
 
-.gallery {
-    display: flex;
-    background-color: var(--background);
-    gap: 16px;
-}
-
-
 

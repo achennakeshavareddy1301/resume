@@ -35,6 +35,42 @@ function animateLogo() {
         logo.classList.remove('animate');
     }, 1000);
 }
+document.getElementById('profile-card').addEventListener('submit', function(event) {
+    const name = document.getElementById('name');
+    const phone = document.getElementById('phone');
+    const designation = document.getElementById('designation');
+    
+    let isValid = true;
+    
+    // Name validation
+    if (name.value.trim() === '') {
+        document.getElementById('name-error').textContent = 'Name is required.';
+        isValid = false;
+    } else {
+        document.getElementById('name-error').textContent = '';
+    }
+    
+    // Phone number validation
+    const phonePattern = /^[0-9]{10}$/;
+    if (!phonePattern.test(phone.value)) {
+        document.getElementById('phone-error').textContent = 'Enter a valid 10-digit phone number.';
+        isValid = false;
+    } else {
+        document.getElementById('phone-error').textContent = '';
+    }
+    
+    // Designation validation
+    if (designation.value.trim() === '') {
+        document.getElementById('designation-error').textContent = 'Designation is required.';
+        isValid = false;
+    } else {
+        document.getElementById('designation-error').textContent = '';
+    }
+    
+    if (!isValid) {
+        event.preventDefault();
+    }
+});
 
 // Event listener to animate the navbar logo on click
 document.querySelector('nav img').addEventListener('click', animateLogo);

@@ -6,7 +6,7 @@
     <title>MY RESUME</title>
     <meta name="description" content="A brief description about me">
     <meta name="author" content="CHENNAKESHAVA REDDY">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles1.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;500;600&display=swap" rel="stylesheet">
@@ -80,7 +80,7 @@
                   <article class="card">
                       <figure>
                          <img
-                         src="./pyhton.jpeg"
+                         src="./python.jpeg"
                          alt="PYTHON">
                          <figcaption>
                              <h3>PYTHON</h3>
@@ -90,6 +90,19 @@
                </div> 
             </div>
         </div>
+        <form id ="profile-card"action="submit_form.mysql" method="post">
+            <h1>For further contact</h1>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="e.g. 1234567890" required><br><br>
+            
+            <label for="designation">Designation:</label>
+            <input type="text" id="designation" name="designation" required><br><br>
+            
+            <input type="submit" value="Submit">
+        </form>
         <div class="background">
             <ul class="social-media-buttons">
                 <li>

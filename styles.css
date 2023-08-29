@@ -55,7 +55,7 @@ nav p {
 #profile-card1 img, #profile-card img {
     width: 120px;
     height: 120px;
-    border-radius: 50%;
+    border-radius: 25px;
     margin-right: 20px;
     animation: bounceIn 1s ease-in;
 }
@@ -224,7 +224,7 @@ footer p {
 #profile-card1 img, #profile-card img {
     width: 120px;
     height: 120px;
-    border-radius: 50%;
+    border-radius: 25px;
     margin-right: 20px;
     transition: transform 0.3s ease-in-out;
 }

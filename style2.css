@@ -15,7 +15,6 @@ body {
 
 body {
   background-color: #f2f2f2;
-  background-image: linear-gradient(135deg, #3dcb76 0%, #917e28 100%);
   background-size: cover;
   background-attachment: fixed;
   animation: backgroundChange 10s infinite alternate;
@@ -226,17 +225,6 @@ footer p {
 }
 
 /* ... (rest of the styles) ... */
-
-/* Keyframe animations */
-
-@keyframes backgroundChange {
-  0% {
-    background-image: linear-gradient(135deg, #3dcb76 0%, #917e28 100%);
-  }
-  100% {
-    background-image: linear-gradient(135deg, #3dcb76 0%, #917e28 100%);
-  }
-}
 
 /* ... (previous styles) ... */
 

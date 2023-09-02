@@ -1740,3 +1740,21 @@
   animation-name: slideOutUp;
 }
 
+@media screen and (max-width: 768px) {
+  #profile-card1, #profile-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+#profile-card1, #profile-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  animation: slideInUp 1s ease-in;
+}
+

@@ -373,7 +373,6 @@ input:valid {
 }
 @media only screen and (max-width: 600px) {
   .profile-card1 img{
-    display:block;
-    margin:auto;
+    text-align:center;
   }
 }

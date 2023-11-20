@@ -371,8 +371,10 @@ input:valid {
   opacity: 1;
   transform: translateY(0);
 }
-@media only screen and (max-width: 600px) {
-  .profile-card1 img{
-    text-align:center;
+@media (max-width: 767px) {
+  #profile-card1 img {
+    display: block;
+    margin: 0 auto;
   }
 }
+

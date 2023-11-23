@@ -25,7 +25,7 @@ body {
 nav {
   background-color: #333;
   color: white;
-  dispaly:flex;
+  display:flex;
   position:fixed;
   align-items: center;
   padding: 10px;
